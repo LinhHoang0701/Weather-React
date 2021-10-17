@@ -79,18 +79,18 @@ class AppContainer extends React.Component {
     return (
       <Fragment>
         <div className="main">
+          <h1>Temperature and humidity monitoring system</h1>
           <div className="panel">
             <AutocompleteContainer onLocationChange={ this.handleLocationChange }/>
             <ThemeSwitcher />
           </div>
-          
           <Geo data={{ cityName, date }} />
           
           <Temperature data={{ actualTemperature, maxTemperature, minTemperature }} />
           
           <Detail data={{ weatherDescription, weatherIcon, windSpeed, humidity, pressure }}/>
           
-          <Diagram data={{ temperaturesForecast, temperaturesForecastLabels, loaded }}/>
+          {/* <Diagram data={{ temperaturesForecast, temperaturesForecastLabels, loaded }}/> */}
         </div>
       </Fragment>
     );
